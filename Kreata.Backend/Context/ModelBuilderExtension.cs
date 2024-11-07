@@ -58,6 +58,24 @@ namespace Kreata.Backend.Context
             };
 
             modelBuilder.Entity<Teacher>().HasData(techers);
+
+            List<Pizzeriak> pizzeriak = new List<Pizzeriak>
+            {
+                new Pizzeriak
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Pacek Pizza",
+                    address = "Ulánbátor",
+                },
+                new Pizzeriak
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Bella Ciao",
+                    address = "Szeged",
+                }
+
+            };
+            modelBuilder.Entity<Pizzeriak>().HasData(pizzeriak);
         }
     }
 }
